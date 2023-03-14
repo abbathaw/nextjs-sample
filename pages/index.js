@@ -11,7 +11,7 @@ const baseURL = process.env.VERCEL_URL
 
 export async function getServerSideProps() {
   try {
-    const url = `${baseURL}/api/test/?type=users&offset=0&size=10`;
+    const url = `${baseURL}/api/test?type=users&offset=0&size=10`;
     const requestHeaders = new Headers();
     requestHeaders.set("Content-Type", "application/json");
     const response = await fetch(url, {
