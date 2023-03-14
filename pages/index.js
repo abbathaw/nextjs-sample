@@ -5,7 +5,9 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const baseURL = process.env.VERCEL_URL || "http://localhost:3001";
+const baseURL = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
 
 export async function getServerSideProps() {
   try {
